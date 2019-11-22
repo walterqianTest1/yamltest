@@ -22,8 +22,8 @@ stages:
     steps:
     - bash: echo "B"
 
-- stage: C
+- stage: D
   jobs:
-  - job: C
+  - job: D
     steps:
-    - bash: echo "C"
+    - bash: echo "D"
