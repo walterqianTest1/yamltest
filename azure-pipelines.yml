@@ -3,15 +3,11 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
+pr:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
-stages:
-- stage: A
-  jobs:
-  - job: A
-    steps:
-    - bash: echo "A"
+steps:
+- script: echo $(build.sourcebranch)
