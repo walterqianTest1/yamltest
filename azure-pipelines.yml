@@ -1,16 +1,10 @@
 trigger:
-- master
-pr:
-- master
+- '*'
 
 pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: echo master branch
-- script: echo $(build.sourcebranch)
-  displayName: 'Run a one-line script'
-
 - task: gitmirror@0
   inputs:
     GitRepoUrl: 'https://ikjmrgdvjhc2ze542knititnzvekeiuas3n4tgd4paowguvyeula@dev.azure.com/walterQian/Case/_git/yamltest.git'
